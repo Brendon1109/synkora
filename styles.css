@@ -6,21 +6,31 @@
 }
 
 :root {
-    /* Nude Color Palette */
-    --nude-primary: #D4B5A0;
-    --nude-secondary: #E6C8B5;
-    --nude-tertiary: #F2E5D7;
-    --nude-dark: #A68B73;
-    --nude-darker: #8B6F47;
-    --nude-light: #F7F1EC;
-    --nude-accent: #C4956C;
+    /* Modern Tech + Warm Atmosphere Color Palette */
+    --primary: #1B2951;           /* Deep midnight blue/navy - trust, stability */
+    --accent: #FF6B5A;            /* Warm coral - human, creative spark */
+    --accent-soft: #FF8C42;       /* Soft orange variation */
+    --highlight: #FF6B5A;         /* Bright coral for CTAs */
+    --highlight-alt: #4ECDC4;     /* Clean turquoise alternative */
+    --supporting-light: #E8E9EA;  /* Light silver/grey */
+    --supporting-dark: #B0B3B8;   /* Medium grey */
+    --background: #FAFBFC;        /* Off-white background */
     
-    /* Neutral Colors */
+    /* Updated Color Variables (keeping old names for compatibility) */
+    --nude-primary: #FF6B5A;      /* Now coral accent */
+    --nude-secondary: #FF8C42;    /* Soft orange */
+    --nude-tertiary: #E8E9EA;     /* Light silver/grey */
+    --nude-dark: #B0B3B8;         /* Medium grey */
+    --nude-darker: #1B2951;       /* Deep navy */
+    --nude-light: #FAFBFC;        /* Off-white */
+    --nude-accent: #4ECDC4;       /* Turquoise */
+    
+    /* Base Colors */
     --white: #FFFFFF;
-    --black: #1A1A1A;
-    --gray-light: #F5F5F5;
-    --gray-medium: #8E8E8E;
-    --gray-dark: #333333;
+    --black: #1B2951;             /* Updated to navy for softer contrast */
+    --gray-light: #E8E9EA;
+    --gray-medium: #B0B3B8;
+    --gray-dark: #1B2951;
     
     /* Typography */
     --font-primary: 'Inter', sans-serif;
@@ -31,9 +41,9 @@
     --font-weight-bold: 700;
     
     /* Shadows and Effects */
-    --shadow-light: 0 2px 10px rgba(212, 181, 160, 0.1);
-    --shadow-medium: 0 5px 25px rgba(212, 181, 160, 0.15);
-    --shadow-heavy: 0 10px 40px rgba(212, 181, 160, 0.2);
+    --shadow-light: 0 2px 10px rgba(255, 107, 90, 0.1);
+    --shadow-medium: 0 5px 25px rgba(255, 107, 90, 0.15);
+    --shadow-heavy: 0 10px 40px rgba(255, 107, 90, 0.2);
     
     /* Transitions */
     --transition-fast: 0.2s ease;
@@ -50,7 +60,7 @@ body {
     font-weight: var(--font-weight-regular);
     line-height: 1.6;
     color: var(--gray-dark);
-    background-color: var(--nude-light);
+    background-color: var(--background);
     overflow-x: hidden;
 }
 
@@ -92,9 +102,9 @@ p {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(247, 241, 236, 0.95);
+    background: rgba(250, 251, 252, 0.95);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--nude-secondary);
+    border-bottom: 1px solid var(--supporting-light);
     z-index: 1000;
     transition: var(--transition-medium);
 }
@@ -206,7 +216,7 @@ p {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, var(--nude-light) 0%, var(--nude-tertiary) 100%);
+    background: linear-gradient(135deg, var(--background) 0%, var(--supporting-light) 50%, var(--nude-light) 100%);
     position: relative;
     overflow: hidden;
 }
@@ -229,7 +239,7 @@ p {
     font-weight: var(--font-weight-bold);
     color: var(--black);
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, var(--nude-darker), var(--nude-accent));
+    background: linear-gradient(135deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -265,8 +275,8 @@ p {
 .element {
     position: absolute;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--nude-primary), var(--nude-secondary));
-    opacity: 0.7;
+    background: linear-gradient(135deg, var(--accent), var(--highlight-alt));
+    opacity: 0.8;
     animation: float 6s ease-in-out infinite;
 }
 
@@ -370,7 +380,7 @@ section {
 
 /* Services Section */
 .services {
-    background: linear-gradient(135deg, var(--nude-light) 0%, var(--nude-tertiary) 100%);
+    background: linear-gradient(135deg, var(--background) 0%, var(--supporting-light) 100%);
 }
 
 .services-grid {
@@ -396,7 +406,7 @@ section {
 .service-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, var(--nude-primary), var(--nude-accent));
+    background: linear-gradient(135deg, var(--accent), var(--highlight-alt));
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -511,7 +521,7 @@ section {
 
 /* Contact Section */
 .contact {
-    background: linear-gradient(135deg, var(--nude-light) 0%, var(--nude-tertiary) 100%);
+    background: linear-gradient(135deg, var(--background) 0%, var(--supporting-light) 100%);
 }
 
 .contact-content {
@@ -542,7 +552,7 @@ section {
 .contact-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, var(--nude-primary), var(--nude-accent));
+    background: linear-gradient(135deg, var(--accent), var(--highlight-alt));
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -578,8 +588,8 @@ section {
 
 /* Footer */
 .footer {
-    background: var(--nude-darker);
-    color: var(--nude-light);
+    background: var(--primary);
+    color: var(--background);
     padding: 2rem 0 1rem;
 }
 
@@ -591,12 +601,12 @@ section {
 }
 
 .footer-info h3 {
-    color: var(--nude-light);
+    color: var(--background);
     margin-bottom: 0.5rem;
 }
 
 .footer-info p {
-    color: var(--nude-secondary);
+    color: var(--supporting-light);
     margin-bottom: 0.25rem;
 }
 
@@ -608,7 +618,7 @@ section {
 .social-icon {
     width: 40px;
     height: 40px;
-    background: var(--nude-primary);
+    background: var(--accent);
     color: var(--white);
     border-radius: 50%;
     display: flex;
@@ -619,18 +629,18 @@ section {
 }
 
 .social-icon:hover {
-    background: var(--nude-accent);
+    background: var(--highlight-alt);
     transform: translateY(-2px);
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 1rem;
-    border-top: 1px solid var(--nude-primary);
+    border-top: 1px solid var(--accent);
 }
 
 .footer-bottom p {
-    color: var(--nude-secondary);
+    color: var(--supporting-light);
     margin: 0;
 }
 
@@ -641,7 +651,7 @@ section {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: var(--nude-light);
+        background-color: var(--background);
         width: 100%;
         text-align: center;
         transition: var(--transition-fast);
